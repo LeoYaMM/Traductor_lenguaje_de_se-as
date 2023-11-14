@@ -1,5 +1,5 @@
 '''
-Objetivo: Se desarrollara un sistema para traducir el lenguaje de se;as utilizando opnecv
+Este programa agrega a la base de datos las imagenes de la lengua de señas
 
 Desarrolladores: 
 Castillo R. Diego
