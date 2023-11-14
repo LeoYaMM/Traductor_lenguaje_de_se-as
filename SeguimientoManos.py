@@ -58,7 +58,7 @@ class detectormanos():
             bbox = xmin, ymin, xmax, ymax
             if dibujar:
                 # Dibujamos cuadro
-                cv2.rectangle(frame,(xmin - 20, ymin - 20), (xmax + 20, ymax + 20), color,2)
+                cv2.rectangle(frame,(xmin - 40, ymin - 40), (xmax + 40, ymax + 40), color,2)
         return self.lista, bbox, player
 
     #----------------------------------Funcion para detectar y dibujar los dedos arriba------------------------
