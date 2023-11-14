@@ -65,10 +65,8 @@ while True:
     esc= cv2.waitKey(1)
 
     #Si se presiona esc finaliza el programa
-    if esc ==  27 or cont== 100:
+    if esc ==  27 or cont== 200:
         break
-    
-    
 
 
 cap.release()
