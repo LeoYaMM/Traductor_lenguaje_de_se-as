@@ -48,29 +48,31 @@ while True:
     #Posicion de una mano
     List1, bbox, mano = detector.encontrarposicion(frame, ManoNum=0, dibujar= True, color=[0,255,0])
 
+    # Initialize xmin, xmax, ymin, ymax
+    xmin = ymin = xmax = ymax = None
+
     #Si hay mano, se extraen los pixeles
     if mano== 1:
         #Es devuelto por la funcion encontrarPosicion
         xmin, ymin, xmax, ymax= bbox
 
     #Recortamos el frame de la mano y homogeneizamos la dimension
-    #recorte= frame[ymin:ymax, xmin:xmax]
-    #recorte= cv2.resize(recorte, (640,640), interpolation= cv2.INTER_CUBIC)
+        recorte= frame[ymin:ymax, xmin:xmax]
+        #recorte= cv2.resize(recorte, (500,500), interpolation= cv2.INTER_CUBIC)
 
-    #cv2.imshow("recorte", recorte)
+        cv2.imshow("recorte", recorte)
 
     #Almacena imagenes para la base de datos
-    #cv2.imwrite(carpeta + "A_{}.jpg".format(cont), recorte)
-    #cont= cont+1
+        cv2.imwrite("C:/Users/yleob/OneDrive/Escritorio/Imagenes/A_{}.jpg".format(cont), recorte)
+        cont= cont+1
 
     #Muestra la camara
     cv2.imshow("Lenguaje de senias", frame)
+
     esc= cv2.waitKey(1)
-
     #Si se presiona esc finaliza el programa
-    if esc ==  27 or cont== 200:
+    if esc ==  27 or cont== 100:
         break
-
 
 cap.release()
 cv2.destroyAllWindows()

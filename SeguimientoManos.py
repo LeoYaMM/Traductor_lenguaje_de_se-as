@@ -55,7 +55,7 @@ class detectormanos():
 
             xmin, xmax = min(xlista), max(xlista)
             ymin, ymax = min(ylista), max(ylista)
-            bbox = xmin, ymin, xmax, ymax
+            bbox = xmin-40 , ymin-40, xmax+40, ymax+40
             if dibujar:
                 # Dibujamos cuadro
                 cv2.rectangle(frame,(xmin - 40, ymin - 40), (xmax + 40, ymax + 40), color,2)
