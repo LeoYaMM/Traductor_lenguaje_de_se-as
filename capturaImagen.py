@@ -19,7 +19,7 @@ import os
 import SeguimientoManos
 
 #Creacion de carpeta de entrenamiento
-nombre= 'G' #Cambia la letra del abecedario
+nombre= 'H' #Cambia la letra del abecedario
 #Cambia la direccion a tu clon del repositorio
 direccion='C:/Users/yleob/OneDrive/Documentos/1. Leo/ESCOM/Semestre 4/Análisis y Diseño de Sistemas/Traductor_lenguaje_de_se-as/CarpetaDeEntrnamiento'
 carpeta= direccion + '/' + nombre
@@ -59,12 +59,11 @@ while True:
 
     #Recortamos el frame de la mano y homogeneizamos la dimension
         recorte= frame[ymin:ymax, xmin:xmax]
-        #recorte= cv2.resize(recorte, (500,500), interpolation= cv2.INTER_CUBIC)
 
         cv2.imshow("recorte", recorte)
 
     #Almacena imagenes para la base de datos
-        cv2.imwrite("C:/Users/yleob/OneDrive/Escritorio/Imagenes/G_{}.jpg".format(cont), recorte) #Cambia la ruta a una carpeta en tu escritorio
+        cv2.imwrite("C:/Users/yleob/OneDrive/Escritorio/Imagenes/H_{}.jpg".format(cont), recorte) #Cambia la ruta a una carpeta en tu escritorio
         cont= cont+1
 
     #Muestra la camara
