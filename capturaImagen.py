@@ -19,7 +19,8 @@ import os
 import SeguimientoManos
 
 #Creacion de carpeta de entrenamiento
-nombre= 'A'
+nombre= 'E' #Cambia la letra del abecedario
+#Cambia la direccion a tu clon del repositorio
 direccion='C:/Users/yleob/OneDrive/Documentos/1. Leo/ESCOM/Semestre 4/Análisis y Diseño de Sistemas/Traductor_lenguaje_de_se-as/CarpetaDeEntrnamiento'
 carpeta= direccion + '/' + nombre
 
@@ -32,7 +33,7 @@ if not os.path.exists(carpeta):
 cap = cv2.VideoCapture(0)
 cap.set(3,1280)
 cap.set(4,720)
-cont=0
+cont=0 #Cambia el iterador al ultimo numero de la imagen
 
 #Declaramos detector de mano
 detector = SeguimientoManos.detectormanos(Confdeteccion=0.9)
@@ -63,7 +64,7 @@ while True:
         cv2.imshow("recorte", recorte)
 
     #Almacena imagenes para la base de datos
-        cv2.imwrite("C:/Users/yleob/OneDrive/Escritorio/Imagenes/A_{}.jpg".format(cont), recorte)
+        cv2.imwrite("C:/Users/yleob/OneDrive/Escritorio/Imagenes/E_{}.jpg".format(cont), recorte) #Cambia la ruta a una carpeta en tu escritorio
         cont= cont+1
 
     #Muestra la camara
