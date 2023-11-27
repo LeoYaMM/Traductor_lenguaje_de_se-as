@@ -7,8 +7,6 @@ Escamilla R. Aldo
 Lopez S. Adair
 Yañez M. Leobardo
 
-Clase Desarrollada por: Santiago Sanchez Rios
-
 Fecha de creacion: 14/11/2023
 '''
 #Importar librerias
