@@ -46,7 +46,7 @@ mp_hands = mp.solutions.hands
 change = True
 change2 = False
 
-cap = cv2.VideoCapture(1)
+cap = cv2.VideoCapture(0)
 with mp_hands.Hands(
     model_complexity=1,
     min_detection_confidence=0.7,

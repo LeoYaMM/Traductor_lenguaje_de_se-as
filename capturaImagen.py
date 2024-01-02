@@ -17,9 +17,9 @@ import os
 import SeguimientoManos
 
 #Creacion de carpeta de entrenamiento
-nombre= 'Y' #Cambia la letra del abecedario
-#Cambia la direccion a tu clon del repositorio
-direccion='C:/Users/yleob/OneDrive/Documentos/1. Leo/ESCOM/Semestre 4/Análisis y Diseño de Sistemas/Traductor_lenguaje_de_se-as/CarpetaDeEntrnamiento'
+nombre= 'Y' #!Cambia la letra del abecedario
+#!Cambia la direccion a tu clon del repositorio
+direccion='C:/Users/diego/Documentos/ESCOM/Programas/ADS/Traductor_lenguaje_de_se-as/CarpetaDeEntrnamiento'
 carpeta= direccion + '/' + nombre
 
 #Si no esta creada la carpeta, se crea
@@ -31,7 +31,8 @@ if not os.path.exists(carpeta):
 cap = cv2.VideoCapture(0)
 cap.set(3,1280)
 cap.set(4,720)
-cont=0 #Cambia el iterador al ultimo numero de la imagen
+cont=100 # !Cambia el iterador al ultimo numero de la imagen
+det = cont + 100 # Variable para detener el bucle
 
 #Declaramos detector de mano
 detector = SeguimientoManos.detectormanos(Confdeteccion=0.9)
@@ -61,7 +62,7 @@ while True:
         cv2.imshow("recorte", recorte)
 
     #Almacena imagenes para la base de datos
-        cv2.imwrite("C:/Users/yleob/OneDrive/Escritorio/Imagenes/Y_{}.jpg".format(cont), recorte) #Cambia la ruta a una carpeta en tu escritorio
+        cv2.imwrite("C:/Users/diego/Documentos/ESCOM/Programas/ADS/Traductor_lenguaje_de_se-as/CarpetaDeEntrnamiento/Y/Y_{}.jpg".format(cont), recorte) #!Cambia la ruta a una carpeta en tu escritorio
         cont= cont+1
 
     #Muestra la camara
@@ -69,7 +70,7 @@ while True:
 
     esc= cv2.waitKey(1)
     #Si se presiona esc finaliza el programa
-    if esc ==  27 or cont== 100:
+    if esc ==  27 or cont== det:
         break
 
 cap.release()
