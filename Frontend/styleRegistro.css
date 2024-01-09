@@ -1,6 +1,6 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #add8e6; /* Light blue background, adjust the color to match your design */
+    background-color: #add8e6; 
     margin: 0;
     padding: 0;
     display: flex;
@@ -39,21 +39,21 @@ button {
 }
 
 button.social-login {
-    background-color: #007bff; /* Adjust the color to match the design */
+    background-color: #007bff; 
     color: white;
     margin-bottom: 10px;
 }
 
 button.social-login.facebook {
-    background-color: #4267B2; /* Facebook color */
+    background-color: #4267B2; 
 }
 
 button.social-login.twitter {
-    background-color: #1DA1F2; /* Twitter color, adjust if needed for 'Xs' */
+    background-color: #000000; 
 }
 
 button.social-login.email {
-    background-color: #db4437; /* Email color, adjust if needed */
+    background-color: #db4437; 
 }
 
 button.social-login:hover {

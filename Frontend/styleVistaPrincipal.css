@@ -1,0 +1,67 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #add8e6; 
+}
+
+.app-container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 10px;
+}
+
+.translation-section {
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 20px 0;
+    width: 80%;
+    display: flex;
+}
+
+.input-area, .output-area {
+    flex: 1;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.output-area {
+    background-color: #0000ff; 
+    border-radius: 0 20px 20px 0;
+    color: white; 
+}
+
+.translate-button {
+    background-color: #ffffff; 
+    color: #0000ff; 
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    font-size: large;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.translate-button:hover {
+    background-color: #f0f0f0; 
+}
+
+.menu-icon {
+    font-size: 24px;
+}
+
+/*.logo {
+    /* Add your logo styles here */
+
