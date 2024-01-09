@@ -1,0 +1,61 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #add8e6; /* Light blue background, adjust the color to match your design */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    background: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.registration-form, .login-form {
+    display: flex;
+    flex-direction: column;
+}
+
+input {
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+button.social-login {
+    background-color: #007bff; /* Adjust the color to match the design */
+    color: white;
+    margin-bottom: 10px;
+}
+
+button.social-login.facebook {
+    background-color: #4267B2; /* Facebook color */
+}
+
+button.social-login.twitter {
+    background-color: #1DA1F2; /* Twitter color, adjust if needed for 'Xs' */
+}
+
+button.social-login.email {
+    background-color: #db4437; /* Email color, adjust if needed */
+}
+
+button.social-login:hover {
+    opacity: 0.9;
+}
