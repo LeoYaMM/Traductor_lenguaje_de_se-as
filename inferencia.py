@@ -1,14 +1,3 @@
-'''
-Este programa agrega a la base de datos las imagenes de la lengua de señas
-
-Desarrolladores: 
-Castillo R. Diego
-Escamilla R. Aldo
-Lopez S. Adair
-Yañez M. Leobardo
-
-Fecha de creacion: 14/11/2023
-'''
 #Importar librerias
 import cv2
 import os
@@ -16,23 +5,10 @@ import os
 #Importamos clases
 import SeguimientoManos
 
-#Creacion de carpeta de entrenamiento
-'''nombre= 'Y' #!Cambia la letra del abecedario
-#!Cambia la direccion a tu clon del repositorio
-direccion='C:/Users/diego/Documentos/ESCOM/Programas/ADS/Traductor_lenguaje_de_se-as/CarpetaDeEntrnamiento'
-carpeta= direccion + '/' + nombre
-
-#Si no esta creada la carpeta, se crea
-if not os.path.exists(carpeta):
-    print('Carpeta creada: ', carpeta)
-    os.makedirs(carpeta)'''
-
 #Captura de video y cambio de resolucion
 cap = cv2.VideoCapture(0)
 cap.set(3,1280)
 cap.set(4,720)
-cont=100 # !Cambia el iterador al ultimo numero de la imagen
-det = cont + 100 # Variable para detener el bucle
 
 #Declaramos detector de mano
 detector = SeguimientoManos.detectormanos(Confdeteccion=0.9)
@@ -61,16 +37,12 @@ while True:
         recorte= cv2.resize(recorte, (640, 640), interpolation=cv2.INTER_CUBIC)
         cv2.imshow("recorte", recorte)
 
-    #Almacena imagenes para la base de datos
-        #cv2.imwrite("C:/Users/diego/Documentos/ESCOM/Programas/ADS/Traductor_lenguaje_de_se-as/CarpetaDeEntrnamiento/Y/Y_{}.jpg".format(cont), recorte) #!Cambia la ruta a una carpeta en tu escritorio
-        #cont= cont+1
-
     #Muestra la camara
     cv2.imshow("Lenguaje de senias", frame)
 
     esc= cv2.waitKey(1)
     #Si se presiona esc finaliza el programa
-    if esc ==  27 or cont== det:
+    if esc ==  27:
         break
 
 cap.release()
