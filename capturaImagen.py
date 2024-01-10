@@ -17,7 +17,7 @@ import os
 import SeguimientoManos
 
 #Creacion de carpeta de entrenamiento
-nombre= 'C' #!Cambia la letra del abecedario
+nombre= 'D' #!Cambia la letra del abecedario
 #!Cambia la direccion a tu clon del repositorio
 direccion='C:/Users/yleob/OneDrive/Documentos/CarpetaDeEntrenamiento'
 carpeta= direccion + '/' + nombre
@@ -62,7 +62,7 @@ while True:
         cv2.imshow("recorte", recorte)
 
     #Almacena imagenes para la base de datos
-        cv2.imwrite("C:/Users/yleob/OneDrive/Documentos/CarpetaDeEntrenamiento/C/C_{}.jpg".format(cont), recorte) #!Cambia la ruta a una carpeta en tu escritorio
+        cv2.imwrite("C:/Users/yleob/OneDrive/Documentos/CarpetaDeEntrenamiento/D/D_{}.jpg".format(cont), recorte) #!Cambia la ruta a una carpeta en tu escritorio
         cont= cont+1
 
     #Muestra la camara
