@@ -1,5 +1,5 @@
-train: C:\Users\diego\Documentos\ESCOM\Programas\ADS\Traductor_lenguaje_de_se-as\train\YOLODataset/images/train/
-val: C:\Users\diego\Documentos\ESCOM\Programas\ADS\Traductor_lenguaje_de_se-as\train\YOLODataset/images/val/
-test: C:\Users\diego\Documentos\ESCOM\Programas\ADS\Traductor_lenguaje_de_se-as\train\YOLODataset/images/test/
+train: C:\Users\diego\Documentos\ESCOM\Programas\ADS\Traductor_lenguaje_de_se-as\dataset\train/
+val: C:\Users\diego\Documentos\ESCOM\Programas\ADS\Traductor_lenguaje_de_se-as\dataset\val/
+test: 
 nc: 21
 names: ["M", "T", "V", "A", "S", "E", "P", "D", "C", "I", "H", "B", "U", "F", "G", "Y", "L", "W", "N", "R", "O"]
