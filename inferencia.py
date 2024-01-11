@@ -1,6 +1,7 @@
 #Importar librerias
 import cv2
 import os
+from ultralytics import YOLO
 
 #Importamos clases
 import SeguimientoManos
@@ -9,6 +10,8 @@ import SeguimientoManos
 cap = cv2.VideoCapture(0)
 cap.set(3,1280)
 cap.set(4,720)
+
+model = YOLO('best.pt')
 
 #Declaramos detector de mano
 detector = SeguimientoManos.detectormanos(Confdeteccion=0.9)
@@ -24,6 +27,8 @@ while True:
     #Posicion de una mano
     List1, bbox, mano = detector.encontrarposicion(frame, ManoNum=0, dibujar= True, color=[0,255,0])
 
+
+
     # Initialize xmin, xmax, ymin, ymax
     xmin = ymin = xmax = ymax = None
 
@@ -35,7 +40,16 @@ while True:
     #Recortamos el frame de la mano y homogeneizamos la dimension
         recorte= frame[ymin:ymax, xmin:xmax]
         recorte= cv2.resize(recorte, (640, 640), interpolation=cv2.INTER_CUBIC)
-        cv2.imshow("recorte", recorte)
+        resultados = model.predict(recorte, conf = 0.55)
+
+        if len(resultados) != 0:
+            for results in resultados:
+                masks = results.masks
+                coordenadas = masks
+
+                anotaciones = resultados[0].plot()
+
+        cv2.imshow("recorte", anotaciones)
 
     #Muestra la camara
     cv2.imshow("Lenguaje de senias", frame)
