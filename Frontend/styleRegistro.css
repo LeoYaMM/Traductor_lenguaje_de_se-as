@@ -1,4 +1,33 @@
+/* .cabecera {
+    background-color: white; 
+    position: fixed; 
+    top: 0; 
+    width: 100%; 
+    z-index: 1000; 
+    display: flex; 
+    align-items: center; 
+    height: 100px;
+    justify-content: space-between;
+    padding: 30px 0;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.logo-escom,
+.logo-ipn {
+    height: 80px; 
+    margin-right: 15px; 
+}
+
+.header-text {
+    margin-left: auto;
+    font-family: 'Poppins',sans-serif;
+    font-size: 24px; 
+    color: #333; 
+    margin-right: 150px;
+} */
+
 body {
+    background-image: url('fondoindex.png');
     font-family: Arial, sans-serif;
     background-color: #add8e6; 
     margin: 0;
@@ -7,13 +36,16 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
+    background-position: center; 
+    background-repeat: no-repeat; 
+    background-size: cover; 
 }
 
 .container {
     display: flex;
     justify-content: space-between;
     background: white;
-    padding: 20px;
+    padding: 30px;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
@@ -21,6 +53,13 @@ body {
 .registration-form, .login-form {
     display: flex;
     flex-direction: column;
+    align-items: center;
+}
+
+h2 {
+    text-align: center;
+    width: 100%;
+    margin: 0;
 }
 
 input {
@@ -36,6 +75,7 @@ button {
     border-radius: 5px;
     cursor: pointer;
     margin-top: 10px;
+    margin-left: 50px;
 }
 
 button.social-login {
