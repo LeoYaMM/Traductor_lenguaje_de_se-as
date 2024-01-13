@@ -10,6 +10,48 @@ def login():
         show_camera_button()
     else:
         messagebox.showerror("Error", "Credenciales incorrectas")
+        
+def open_registration_form():
+    register_window = tk.Toplevel(window)
+    register_window.title("Formulario de Registro")
+    
+    background_color = "#5DADE2"
+    register_window.configure(bg=background_color)
+    
+    register_window_width = 400
+    register_window_height = 300
+    
+    screen_width = register_window.winfo_screenwidth()
+    screen_height = register_window.winfo_screenheight()
+    center_x = int((screen_width - register_window_width) / 2)
+    center_y = int((screen_height - register_window_height) / 2)
+
+    register_window.geometry(f'{register_window_width}x{register_window_height}+{center_x}+{center_y}')
+    
+    registration_frame = tk.Frame(register_window, bg=background_color)
+    registration_frame.pack(pady=50) 
+
+    tk.Label(registration_frame, text="Nombre").pack()
+    entry_name = tk.Entry(registration_frame)
+    entry_name.pack()
+
+    tk.Label(registration_frame, text="Correo electrónico").pack()
+    entry_email = tk.Entry(registration_frame)
+    entry_email.pack()
+
+    tk.Label(registration_frame, text="Contraseña").pack()
+    entry_password = tk.Entry(registration_frame, show="*")
+    entry_password.pack()
+
+    tk.Label(registration_frame, text="Confirmar contraseña").pack()
+    entry_confirm_password = tk.Entry(registration_frame, show="*")
+    entry_confirm_password.pack()
+
+    button_submit = tk.Button(registration_frame, text="Registrarse", command=lambda: register(entry_name.get(), entry_email.get(), entry_password.get(), entry_confirm_password.get()))
+    button_submit.pack()
+        
+def register(name, email, password, confirm_password):
+    messagebox.showinfo("Registro", f"Datos recibidos:\nNombre: {name}\nCorreo electrónico: {email}")
 
 def clear_gui():
     login_frame.pack_forget()
@@ -37,7 +79,7 @@ def open_camera(event):
     messagebox.showinfo("Info", "Abriría la cámara aquí")
     
 window = tk.Tk()
-window.title("Sistema de Login")
+window.title("Sistema Traductor de Lengua de Señas")
 
 window_width = 800
 window_height = 600
@@ -67,5 +109,8 @@ entry_password.pack()
 
 button_login = tk.Button(login_frame, text="Ingresar", command=login)
 button_login.pack()
+
+button_register = tk.Button(login_frame, text="Registrate!", command=open_registration_form)
+button_register.pack(pady=10)
 
 window.mainloop()
