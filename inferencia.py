@@ -40,7 +40,7 @@ while True:
     #Recortamos el frame de la mano y homogeneizamos la dimension
         recorte= frame[ymin:ymax, xmin:xmax]
         recorte= cv2.resize(recorte, (640, 640), interpolation=cv2.INTER_CUBIC)
-        resultados = model.predict(recorte, conf = 0.55)
+        resultados = model.predict(recorte, conf = 0.45)
 
         if len(resultados) != 0:
             for results in resultados:

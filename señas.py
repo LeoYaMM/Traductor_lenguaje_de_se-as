@@ -1,6 +1,15 @@
 import cv2
 import mediapipe as mp
 import numpy as np
+from flask import Flask, render_template
+
+app = Flask(__name__)
+
+@app.route('/')
+def index():
+    return render_template('VistaPrincipal.html')
+
+
 
 def Etiqueta(idx, mano, results):
     aux = None
